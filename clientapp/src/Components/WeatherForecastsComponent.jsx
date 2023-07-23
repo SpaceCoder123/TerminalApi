@@ -1,18 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+
 const WeatherForecastComponent = () => {
   const [forecasts, setForecasts] = useState([]);
 
-
   useEffect(() => {
-    // Define the URL for the API endpoint
-    const apiUrl = 'api/GetWeatherForecast';
+    const fetchData = async () => {
+      try {
+        // Define the URL for the API endpoint
+        const apiUrl = 'https://localhost:7095/WeatherForecast';
 
-    // Fetch data from the API using axios
-    axios.get(apiUrl)
-      .then((response) => setForecasts(response.data));
+        // Fetch data from the API using axios with async/await
+        const response = await axios.get(apiUrl,{
+          headers: {
+            'Content-Type': 'application/json'
+         } 
+        });
+        setForecasts(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
   }, []);
-
 
 
   return (
