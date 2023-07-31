@@ -42,8 +42,6 @@ namespace TerminalAPI.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            
-
         }
 
     }

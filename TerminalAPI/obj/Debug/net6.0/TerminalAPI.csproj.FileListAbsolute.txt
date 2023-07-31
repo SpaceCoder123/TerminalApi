@@ -14,7 +14,6 @@ D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\TerminalAPI.GeneratedMSBuildEd
 D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\TerminalAPI.AssemblyInfoInputs.cache
 D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\TerminalAPI.AssemblyInfo.cs
 D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\TerminalAPI.csproj.CoreCompileInputs.cache
-D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\TerminalAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\TerminalAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\staticwebassets\msbuild.TerminalAPI.Microsoft.AspNetCore.StaticWebAssets.props
 D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.TerminalAPI.props
@@ -36,3 +35,9 @@ D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Terminal.Models.dll
 D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Terminal.DTOs.pdb
 D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Terminal.JWT.pdb
 D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Terminal.Models.pdb
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

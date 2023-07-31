@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Terminal.Models;
 
 namespace Terminal.JWT.Services
 {
@@ -11,5 +7,7 @@ namespace Terminal.JWT.Services
         public void CreatePasswordHash (string username, out byte[] passwordHash, out byte[] passwordSalt);
 
         public bool VerifyPasswordHash(string username, byte[] passwordHash, byte[] passwordSalt);
+
+        public string CreateToken(User user);
     }
 }

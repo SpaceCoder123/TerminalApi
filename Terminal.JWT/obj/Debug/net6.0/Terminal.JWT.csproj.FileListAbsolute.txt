@@ -10,3 +10,6 @@ D:\C#NET\TerminalAPI\Terminal.JWT\obj\Debug\net6.0\Terminal.JWT.dll
 D:\C#NET\TerminalAPI\Terminal.JWT\obj\Debug\net6.0\refint\Terminal.JWT.dll
 D:\C#NET\TerminalAPI\Terminal.JWT\obj\Debug\net6.0\Terminal.JWT.pdb
 D:\C#NET\TerminalAPI\Terminal.JWT\obj\Debug\net6.0\ref\Terminal.JWT.dll
+D:\C#NET\TerminalAPI\Terminal.JWT\bin\Debug\net6.0\Terminal.Models.dll
+D:\C#NET\TerminalAPI\Terminal.JWT\bin\Debug\net6.0\Terminal.Models.pdb
+D:\C#NET\TerminalAPI\Terminal.JWT\obj\Debug\net6.0\Terminal.JWT.csproj.CopyComplete

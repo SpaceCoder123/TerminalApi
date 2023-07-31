@@ -55,16 +55,26 @@ namespace TerminalAPI.Services
 
         public string Login(UserDTO request)
         {
-            if(!ValidateCredentails(request))
+            try
             {
-                throw new Exception("The user is not found, kindly register");
+                if (!ValidateCredentails(request))
+                {
+                    throw new Exception("The user is not found, kindly register");
+                }
+                bool verifyPasswordHash = _passwordService.VerifyPasswordHash(request.Username, user.PasswordHash, user.PasswordSalt);
+                if (!verifyPasswordHash)
+                {
+                    throw new Exception("The user password is wrong");
+                }
+                string Token = _passwordService.CreateToken(user);
+                return Token;
             }
-            bool verifyPasswordHash = _passwordService.VerifyPasswordHash(request.Username, user.PasswordHash, user.PasswordSalt);
-            if (!verifyPasswordHash)
+            catch (Exception ex)
             {
-                throw new Exception("The user password is wrong");
+                throw new Exception(ex.Message);
             }
-            return "My Crazy Token";
+
+            
 
         }
     }
