@@ -9,7 +9,10 @@
       "TerminalAPI/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Cors": "2.2.0",
-          "Swashbuckle.AspNetCore": "6.2.3"
+          "Swashbuckle.AspNetCore": "6.2.3",
+          "Terminal.DTOs": "1.0.0",
+          "Terminal.JWT": "1.0.0",
+          "Terminal.Models": "1.0.0"
         },
         "runtime": {
           "TerminalAPI.dll": {}
@@ -125,7 +128,22 @@
       "System.ComponentModel.Annotations/4.5.0": {},
       "System.Memory/4.5.1": {},
       "System.Runtime.CompilerServices.Unsafe/4.5.1": {},
-      "System.Text.Encodings.Web/4.5.0": {}
+      "System.Text.Encodings.Web/4.5.0": {},
+      "Terminal.DTOs/1.0.0": {
+        "runtime": {
+          "Terminal.DTOs.dll": {}
+        }
+      },
+      "Terminal.JWT/1.0.0": {
+        "runtime": {
+          "Terminal.JWT.dll": {}
+        }
+      },
+      "Terminal.Models/1.0.0": {
+        "runtime": {
+          "Terminal.Models.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -287,6 +305,21 @@
       "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "path": "system.text.encodings.web/4.5.0",
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
+    },
+    "Terminal.DTOs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Terminal.JWT/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Terminal.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

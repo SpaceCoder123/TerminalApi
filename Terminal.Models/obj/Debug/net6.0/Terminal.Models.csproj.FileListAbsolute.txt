@@ -1,0 +1,12 @@
+D:\C#NET\TerminalAPI\Terminal.Models\bin\Debug\net6.0\Terminal.Models.deps.json
+D:\C#NET\TerminalAPI\Terminal.Models\bin\Debug\net6.0\Terminal.Models.dll
+D:\C#NET\TerminalAPI\Terminal.Models\bin\Debug\net6.0\Terminal.Models.pdb
+D:\C#NET\TerminalAPI\Terminal.Models\obj\Debug\net6.0\Terminal.Models.csproj.AssemblyReference.cache
+D:\C#NET\TerminalAPI\Terminal.Models\obj\Debug\net6.0\Terminal.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#NET\TerminalAPI\Terminal.Models\obj\Debug\net6.0\Terminal.Models.AssemblyInfoInputs.cache
+D:\C#NET\TerminalAPI\Terminal.Models\obj\Debug\net6.0\Terminal.Models.AssemblyInfo.cs
+D:\C#NET\TerminalAPI\Terminal.Models\obj\Debug\net6.0\Terminal.Models.csproj.CoreCompileInputs.cache
+D:\C#NET\TerminalAPI\Terminal.Models\obj\Debug\net6.0\Terminal.Models.dll
+D:\C#NET\TerminalAPI\Terminal.Models\obj\Debug\net6.0\refint\Terminal.Models.dll
+D:\C#NET\TerminalAPI\Terminal.Models\obj\Debug\net6.0\Terminal.Models.pdb
+D:\C#NET\TerminalAPI\Terminal.Models\obj\Debug\net6.0\ref\Terminal.Models.dll

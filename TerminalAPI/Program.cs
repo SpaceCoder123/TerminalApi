@@ -1,3 +1,6 @@
+using Terminal.JWT.Services;
+using TerminalAPI.Services;
+
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 
@@ -10,6 +13,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IPasswordService, PasswordPropertiesService>();
+builder.Services.AddScoped<IAuthServices, AuthServices>();
+
 
 builder.Services.AddCors(options =>
 {

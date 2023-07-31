@@ -1,0 +1,12 @@
+D:\C#NET\TerminalAPI\Terminal.DTOs\bin\Debug\net6.0\Terminal.DTOs.deps.json
+D:\C#NET\TerminalAPI\Terminal.DTOs\bin\Debug\net6.0\Terminal.DTOs.dll
+D:\C#NET\TerminalAPI\Terminal.DTOs\bin\Debug\net6.0\Terminal.DTOs.pdb
+D:\C#NET\TerminalAPI\Terminal.DTOs\obj\Debug\net6.0\Terminal.DTOs.csproj.AssemblyReference.cache
+D:\C#NET\TerminalAPI\Terminal.DTOs\obj\Debug\net6.0\Terminal.DTOs.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#NET\TerminalAPI\Terminal.DTOs\obj\Debug\net6.0\Terminal.DTOs.AssemblyInfoInputs.cache
+D:\C#NET\TerminalAPI\Terminal.DTOs\obj\Debug\net6.0\Terminal.DTOs.AssemblyInfo.cs
+D:\C#NET\TerminalAPI\Terminal.DTOs\obj\Debug\net6.0\Terminal.DTOs.csproj.CoreCompileInputs.cache
+D:\C#NET\TerminalAPI\Terminal.DTOs\obj\Debug\net6.0\Terminal.DTOs.dll
+D:\C#NET\TerminalAPI\Terminal.DTOs\obj\Debug\net6.0\refint\Terminal.DTOs.dll
+D:\C#NET\TerminalAPI\Terminal.DTOs\obj\Debug\net6.0\Terminal.DTOs.pdb
+D:\C#NET\TerminalAPI\Terminal.DTOs\obj\Debug\net6.0\ref\Terminal.DTOs.dll

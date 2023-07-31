@@ -30,3 +30,9 @@ D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\refint\TerminalAPI.dll
 D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\TerminalAPI.pdb
 D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\TerminalAPI.genruntimeconfig.cache
 D:\C#NET\TerminalAPI\TerminalAPI\obj\Debug\net6.0\ref\TerminalAPI.dll
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Terminal.DTOs.dll
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Terminal.JWT.dll
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Terminal.Models.dll
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Terminal.DTOs.pdb
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Terminal.JWT.pdb
+D:\C#NET\TerminalAPI\TerminalAPI\bin\Debug\net6.0\Terminal.Models.pdb
