@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#NET\\TerminalAPI\\Terminal.JWT\\Terminal.JWT.csproj": {}
+    "D:\\C#NET\\TerminalAPI\\Terminal.DTOs\\Terminal.DTOs.csproj": {}
   },
   "projects": {
-    "D:\\C#NET\\TerminalAPI\\Terminal.JWT\\Terminal.JWT.csproj": {
+    "D:\\C#NET\\TerminalAPI\\Terminal.DTOs\\Terminal.DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#NET\\TerminalAPI\\Terminal.JWT\\Terminal.JWT.csproj",
-        "projectName": "Terminal.JWT",
-        "projectPath": "D:\\C#NET\\TerminalAPI\\Terminal.JWT\\Terminal.JWT.csproj",
+        "projectUniqueName": "D:\\C#NET\\TerminalAPI\\Terminal.DTOs\\Terminal.DTOs.csproj",
+        "projectName": "Terminal.DTOs",
+        "projectPath": "D:\\C#NET\\TerminalAPI\\Terminal.DTOs\\Terminal.DTOs.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\C#NET\\TerminalAPI\\Terminal.JWT\\obj\\",
+        "outputPath": "D:\\C#NET\\TerminalAPI\\Terminal.DTOs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
