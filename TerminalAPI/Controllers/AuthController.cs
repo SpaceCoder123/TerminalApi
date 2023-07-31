@@ -29,5 +29,22 @@ namespace TerminalAPI.Controllers
                 return BadRequest("The request user could not be registered due to internal server issues");
             }
         }
+
+        [HttpPost("login")]
+        public async Task<ActionResult<string>> Login(UserDTO userDTO)
+        {
+            try
+            {
+                string token = _authServices.Login(userDTO);
+                return Ok(token);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
+
+        }
+
     }
 }

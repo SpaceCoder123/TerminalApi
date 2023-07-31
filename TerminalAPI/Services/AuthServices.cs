@@ -39,6 +39,34 @@ namespace TerminalAPI.Services
             }
 
         }
+        #endregion
+
+        public bool ValidateCredentails(UserDTO request)
+        {
+            if(request.Username == user.Username)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public string Login(UserDTO request)
+        {
+            if(!ValidateCredentails(request))
+            {
+                throw new Exception("The user is not found, kindly register");
+            }
+            bool verifyPasswordHash = _passwordService.VerifyPasswordHash(request.Username, user.PasswordHash, user.PasswordSalt);
+            if (!verifyPasswordHash)
+            {
+                throw new Exception("The user password is wrong");
+            }
+            return "My Crazy Token";
+
+        }
     }
-    #endregion
+
 }
