@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Terminal.DTOs\Terminal.DTOs.csproj" />
+    <ProjectReference Include="..\Terminal.JWT\Terminal.JWT.csproj" />
+    <ProjectReference Include="..\Terminal.Models\Terminal.Models.csproj" />
+  </ItemGroup>
+
 </Project>
