@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using Terminal.DTOs;
 using Terminal.Models;
 
 namespace Terminal.JWT.Services
@@ -38,7 +38,7 @@ namespace Terminal.JWT.Services
             }
         }
 
-        public string CreateToken(User user)
+        public string CreateToken(UserDTO user)
         {
             List<Claim> claims = new List<Claim>
             {

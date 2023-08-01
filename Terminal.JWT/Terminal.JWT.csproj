@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Terminal.DTOs\Terminal.DTOs.csproj" />
     <ProjectReference Include="..\Terminal.Models\Terminal.Models.csproj" />
   </ItemGroup>
 

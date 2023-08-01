@@ -1,73 +1,72 @@
-﻿using Terminal.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
+using Terminal.DTOs;
 using Terminal.JWT.Services;
 using Terminal.Models;
+using TerminalAPI.Data;
 
 namespace TerminalAPI.Services
 {
     public class AuthServices : IAuthServices
     {
         private readonly IPasswordService _passwordService;
-        public static User user = new User();
+        private readonly DataContext _context;
+        //public static User user = new User();
 
-        public AuthServices(IPasswordService passwordService)
+        public AuthServices(IPasswordService passwordService, DataContext context)
         {
+            _context= context;
             _passwordService = passwordService;
         }
 
         #region RegisterUser
-        public User RegisterUser(UserDTO request)
+        public async Task<User> RegisterUser(UserDTO request)
         {
-            if (request.Username != null && request.Password != null)
+            if(_context.Users.Any(u=>u.Email == request.Email))
             {
-                if (request.Username.Length > 0 && request.Password.Length > 0)
-                {
-                    _passwordService.CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
-                    user.PasswordSalt = passwordHash;
-                    user.PasswordHash = passwordSalt;
-                    user.Username = request.Username;
-                    return user;
-                }
-                else
-                {
-                    throw new Exception("User name or password cannot be empty");
-                }
+                throw new Exception("Email already exists");
+            }
 
-            }
-            else
+            if (_context.Users.Any(u => u.Username == request.Username))
             {
-                throw new Exception("User name or password cannot be null");
+                throw new Exception("Username already exists");
             }
+
+            _passwordService.CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
+
+            User user = new User()
+            {
+                Email = request.Email,
+                Username = request.Username,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt,
+                VerificationToken = _passwordService.CreateToken(request)
+            };
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            return user;
 
         }
         #endregion
 
-        public bool ValidateCredentails(UserDTO request)
-        {
-            if(request.Username == user.Username)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public string Login(UserDTO request)
+        public async Task<string> Login(UserLoginDTO request)
         {
             try
             {
-                if (!ValidateCredentails(request))
+                var user = await _context.Users.FirstOrDefaultAsync(u=>u.Email == request.Email);
+                if(user == null) 
                 {
-                    throw new Exception("The user is not found, kindly register");
+                    throw new Exception("No user found");
                 }
-                bool verifyPasswordHash = _passwordService.VerifyPasswordHash(request.Username, user.PasswordHash, user.PasswordSalt);
-                if (!verifyPasswordHash)
+                if(!_passwordService.VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
                 {
-                    throw new Exception("The user password is wrong");
+                    throw new Exception("Password is Incorrect");
                 }
-                string Token = _passwordService.CreateToken(user);
-                return Token;
+                if(user.VerifiedAt == null)
+                {
+                    throw new Exception("Not Verified");
+                }
+                return "Welcome back";
             }
             catch (Exception ex)
             {

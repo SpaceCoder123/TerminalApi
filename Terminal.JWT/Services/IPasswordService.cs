@@ -1,4 +1,4 @@
-﻿using Terminal.Models;
+﻿using Terminal.DTOs;
 
 namespace Terminal.JWT.Services
 {
@@ -8,7 +8,7 @@ namespace Terminal.JWT.Services
 
         public bool VerifyPasswordHash(string username, byte[] passwordHash, byte[] passwordSalt);
 
-        public string CreateToken(User user);
+        public string CreateToken(UserDTO user);
 
         //public RefreshToken GenerateRefreshToken();
 

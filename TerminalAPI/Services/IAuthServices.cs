@@ -5,8 +5,8 @@ namespace TerminalAPI.Services
 {
     public interface IAuthServices
     {
-        public User RegisterUser (UserDTO request);
+        public Task<User> RegisterUser (UserDTO request);
 
-        public string Login(UserDTO request);
+        public Task<string> Login(UserLoginDTO request);
     }
 }

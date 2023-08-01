@@ -21,7 +21,7 @@ namespace TerminalAPI.Controllers
         {
             try
             {
-                User user = _authServices.RegisterUser(userDTO);
+                User user = await _authServices.RegisterUser(userDTO);
                 return Ok(user);
             }
             catch (Exception ex)
@@ -31,12 +31,11 @@ namespace TerminalAPI.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<ActionResult<string>> Login(UserDTO userDTO)
+        public async Task<ActionResult<string>> Login(UserLoginDTO userDTO)
         {
             try
             {
-                string token = _authServices.Login(userDTO);
-                return Ok(token);
+                return Ok(await _authServices.Login(userDTO));
             }
             catch (Exception ex)
             {
