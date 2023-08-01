@@ -17,13 +17,14 @@ namespace TerminalAPI.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<ActionResult<User>> Register(UserDTO userDTO)
+        public async Task<ActionResult<string>> Register(UserDTO userDTO)
         {
             try
             {
-                User user = await _authServices.RegisterUser(userDTO);
-                return Ok(user);
+                string token = await _authServices.RegisterUser(userDTO);
+                return Ok(token);
             }
+
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
@@ -36,6 +37,19 @@ namespace TerminalAPI.Controllers
             try
             {
                 return Ok(await _authServices.Login(userDTO));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("Verify")]
+        public async Task<ActionResult<string>> Verify(string token)
+        {
+            try
+            {
+                return Ok(await _authServices.Verify(token));
             }
             catch (Exception ex)
             {

@@ -21,7 +21,7 @@ namespace Terminal.JWT.Services
         /// <param name="password"></param>
         /// <param name="passwordSalt"></param>
         /// <param name="passwordHash"></param>
-        public void CreatePasswordHash(string password, out byte[] passwordSalt, out byte[] passwordHash)
+        public void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
             using (var hmac = new HMACSHA512())
             {
@@ -34,7 +34,8 @@ namespace Terminal.JWT.Services
             using (var hmac = new HMACSHA512(passwordSalt))
             {
                 var computeHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-                return computeHash.SequenceEqual(passwordHash);
+                bool check = computeHash.SequenceEqual(passwordHash);
+                return check;
             }
         }
 

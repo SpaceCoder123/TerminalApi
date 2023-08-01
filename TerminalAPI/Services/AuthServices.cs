@@ -10,16 +10,15 @@ namespace TerminalAPI.Services
     {
         private readonly IPasswordService _passwordService;
         private readonly DataContext _context;
-        //public static User user = new User();
 
         public AuthServices(IPasswordService passwordService, DataContext context)
         {
-            _context= context;
+            _context = context;
             _passwordService = passwordService;
         }
 
         #region RegisterUser
-        public async Task<User> RegisterUser(UserDTO request)
+        public async Task<string> RegisterUser(UserDTO request)
         {
             if(_context.Users.Any(u=>u.Email == request.Email))
             {
@@ -44,7 +43,7 @@ namespace TerminalAPI.Services
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
-            return user;
+            return user.VerificationToken;
 
         }
         #endregion
@@ -62,7 +61,7 @@ namespace TerminalAPI.Services
                 {
                     throw new Exception("Password is Incorrect");
                 }
-                if(user.VerifiedAt == null)
+                if(user.VerifiedAt == DateTime.MinValue)
                 {
                     throw new Exception("Not Verified");
                 }
@@ -73,6 +72,28 @@ namespace TerminalAPI.Services
                 throw new Exception(ex.Message);
             }
         }
+
+        public async Task<string> Verify(string token)
+        {
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.VerificationToken == token);
+                if (user == null)
+                {
+                    throw new Exception("No user found with the particular token");
+                }
+                user.VerifiedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+                
+                return "User verified";
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
     }
 
 }
