@@ -55,6 +55,33 @@ namespace TerminalAPI.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }  
+        
+        
+        [HttpPost("forgot-password")]
+        public async Task<ActionResult<string>> ForgotPassword(string email)
+        {
+            try
+            {
+                return Ok(await _authServices.ForgotPassword(email));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }  
+        
+        [HttpPost("Reset-Password")]
+        public async Task<ActionResult<string>> ResetPassword(ResetPasswordRequest resetPassword)
+        {
+            try
+            {
+                return Ok(await _authServices.ResetPassword(resetPassword));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
     }

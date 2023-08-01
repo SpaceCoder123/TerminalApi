@@ -52,7 +52,7 @@ namespace Terminal.JWT.Services
                 expires: DateTime.Now.AddDays(1),
                 signingCredentials: cred);
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
-            return jwt.ToString();
+            return jwt;
         }
 
         public RefreshToken GenerateRefreshToken()
