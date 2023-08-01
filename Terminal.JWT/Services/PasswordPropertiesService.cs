@@ -1,9 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
-using System.Text;
 using Terminal.Models;
 
 namespace Terminal.JWT.Services
@@ -53,5 +53,26 @@ namespace Terminal.JWT.Services
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
             return jwt.ToString();
         }
+
+        public RefreshToken GenerateRefreshToken()
+        {
+            var refreshToken = new RefreshToken
+            {
+                Token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
+                Expires= DateTime.Now.AddDays(1),
+                Created = DateTime.Now
+            };
+            return refreshToken;
+        }
+
+        //public void SetRefreshToken(RefreshToken refreshToken)
+        //{
+        //    var cookieOptions = new CookieOptions
+        //    {
+        //        HttpOnly = true,
+        //        Expires = refreshToken.Expires
+        //    };
+        //    Response.Cookies.Append("RefreshToken", refreshToken.Token, cookieOptions);
+        //}
     }
 }

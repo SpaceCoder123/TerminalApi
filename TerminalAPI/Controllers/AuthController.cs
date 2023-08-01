@@ -5,7 +5,7 @@ using TerminalAPI.Services;
 
 namespace TerminalAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -16,7 +16,7 @@ namespace TerminalAPI.Controllers
             _authServices = authServices;
         }
 
-        [HttpPost("register")]
+        [HttpPost("Register")]
         public async Task<ActionResult<User>> Register(UserDTO userDTO)
         {
             try
@@ -24,13 +24,13 @@ namespace TerminalAPI.Controllers
                 User user = _authServices.RegisterUser(userDTO);
                 return Ok(user);
             }
-            catch
+            catch (Exception ex)
             {
-                return BadRequest("The request user could not be registered due to internal server issues");
+                return BadRequest(ex.Message);
             }
         }
 
-        [HttpPost("login")]
+        [HttpPost("Login")]
         public async Task<ActionResult<string>> Login(UserDTO userDTO)
         {
             try

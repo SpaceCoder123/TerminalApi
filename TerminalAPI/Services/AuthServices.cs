@@ -73,9 +73,6 @@ namespace TerminalAPI.Services
             {
                 throw new Exception(ex.Message);
             }
-
-            
-
         }
     }
 

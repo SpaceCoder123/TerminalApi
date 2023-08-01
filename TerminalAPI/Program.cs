@@ -1,4 +1,5 @@
 using Terminal.JWT.Services;
+using TerminalAPI.Data;
 using TerminalAPI.Services;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
@@ -15,6 +16,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPasswordService, PasswordPropertiesService>();
 builder.Services.AddScoped<IAuthServices, AuthServices>();
+builder.Services.AddDbContext<DataContext>();
 
 
 builder.Services.AddCors(options =>

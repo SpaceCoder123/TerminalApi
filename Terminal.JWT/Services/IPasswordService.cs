@@ -9,5 +9,8 @@ namespace Terminal.JWT.Services
         public bool VerifyPasswordHash(string username, byte[] passwordHash, byte[] passwordSalt);
 
         public string CreateToken(User user);
+
+        //public RefreshToken GenerateRefreshToken();
+
     }
 }

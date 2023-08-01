@@ -5,11 +5,11 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerminalAPI", "TerminalAPI.csproj", "{F846B2D3-4637-4735-9AAF-D98C8A8D362B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal.JWT", "..\Terminal.JWT\Terminal.JWT.csproj", "{30C3D8D9-CA6E-4229-9214-803F865B480D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Terminal.JWT", "..\Terminal.JWT\Terminal.JWT.csproj", "{30C3D8D9-CA6E-4229-9214-803F865B480D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal.DTOs", "..\Terminal.DTOs\Terminal.DTOs.csproj", "{F9DA74E7-431B-4D99-88A0-3E274A46DE07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Terminal.DTOs", "..\Terminal.DTOs\Terminal.DTOs.csproj", "{F9DA74E7-431B-4D99-88A0-3E274A46DE07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal.Models", "..\Terminal.Models\Terminal.Models.csproj", "{4B3FEA29-512D-4011-BC8D-617687A56F4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Terminal.Models", "..\Terminal.Models\Terminal.Models.csproj", "{4B3FEA29-512D-4011-BC8D-617687A56F4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
